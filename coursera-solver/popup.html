@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      width: 380px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 16px;
+      background: linear-gradient(180deg, #eef5ff 0%, #f9fbfd 100%);
+      color: #24436b;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #0056D2;
+      font-size: 24px;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .status {
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: #163b59;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status::before {
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #6abf69;
+      display: inline-block;
+    }
+
+    .section {
+      border-radius: 14px;
+      padding: 10px;
+      background: white;
+      border: 1px solid #d7e8ff;
+      box-shadow: 0 3px 12px rgba(30, 100, 170, 0.08);
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 11px 14px;
+      background: linear-gradient(180deg, #1769d7 0%, #0056D2 100%);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+      box-shadow: 0 4px 10px rgba(0, 86, 210, 0.20);
+    }
+
+    button:hover {
+      background: linear-gradient(180deg, #1b76e7 0%, #0048a5 100%);
+      transform: translateY(-1px);
+    }
+
+    button:active {
+      transform: translateY(1px) scale(0.98);
+    }
+
+    button:disabled {
+      background: #b8bec7;
+      color: #eef2f5;
+      cursor: default;
+      box-shadow: none;
+      transform: none;
+    }
+
+    #log {
+      margin-top: 15px;
+      height: 200px;
+      overflow-y: auto;
+      background: white;
+      border: 1px solid #cedcf2;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 12px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      color: #37546d;
+    }
+
+    #startBtn, #stopBtn {
+      flex: 1;
+    }
+
+    #startBtn {
+      background: linear-gradient(180deg, #147ecc 0%, #0b629a 100%);
+    }
+
+    #stopBtn {
+      background: linear-gradient(180deg, #f05b58 0%, #d93025 100%);
+      border-radius: 14px;
+    }
+
+    #discussionBtn {
+      background: linear-gradient(180deg, #30b767 0%, #208f47 100%);
+    }
+
+    #doAssignmentBtn {
+      background: linear-gradient(180deg, #1ab7bb 0%, #178c9a 100%);
+    }
+
+    #gradePeerBtn {
+      background: linear-gradient(180deg, #f3b961 0%, #d6912a 100%);
+    }
+
+    #doQuizBtn {
+      background: linear-gradient(180deg, #9a4dce 0%, #7d3bb2 100%);
+    }
+
+    input,
+    select {
+      border-radius: 10px;
+    }
+
+    input[type="number"] {
+      border: 1px solid #aac4e6;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Coursera Skipper</h2>
+  <div class="status" id="status">SevKan</div>
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div class="section" style="display: flex; gap: 10px;">
+      <button id="startBtn">Skip videos</button>
+      <button id="stopBtn" disabled>Stop</button>
+    </div>
+
+    <div class="section">
+      <button id="discussionBtn">Auto Discussion</button>
+    </div>
+
+    <div class="section">
+      <button id="doAssignmentBtn">Auto Do Peer Assignment</button>
+    </div>
+
+    <div class="section" style="border-color: rgb(61, 84, 215);">
+      <button id="gradePeerBtn" style="margin-top: 4px;">Auto Grade Peer</button>
+      <div
+        style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 8px 12px; border: 1px solid #eee; border-radius: 12px; margin: 5px 0;">
+        <label for="gradeCount" style="font-size: 13px; color: #666; font-weight: 600;">Grade count:</label>
+        <input type="number" id="gradeCount" value="3" min="1" max="50"
+          style="width: 45px; padding: 6px; border: 1px solid #0056D2; border-radius: 10px; outline: none; font-weight: bold; color: #0056D2; text-align: center;">
+      </div>
+    </div>
+
+    <div class="section" style="border-color: #8e44ad;">
+      <div
+        style="display: flex; flex-direction: column; gap: 5px; padding: 4px; background: #fff; border-radius: 12px; margin-bottom: 4px;">
+        <label style="font-size: 13px; color: #666; font-weight: 600;">AI Integration:</label>
+        <select id="aiProvider" style="padding: 6px; border: 1px solid #8e44ad; border-radius: 10px; outline: none;">
+          <option value="gemini-flash">Gemini Flash</option>
+          <option value="openai">OpenAI API</option>
+        </select>
+        <input type="password" id="apiKey" placeholder="Enter API Key here..."
+          style="padding: 6px; border: 1px solid #8e44ad; border-radius: 10px; outline: none;">
+      </div>
+      <button id="doQuizBtn" style="margin-top: 2px;">Auto Do Quiz</button>
+    </div>
+
+  </div>
+  <div id="log"></div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
