@@ -1,81 +1,61 @@
-# Coursera Skipper - Hướng Dẫn Sử Dụng Chi Tiết
+# Coursera Skipper - Detailed User Guide
 
-**Coursera Skipper** là một tiện ích mở rộng trên Chrome giúp tự động hóa quá trình học tập trên Coursera, giúp bạn tiết kiệm thời gian đáng kể bằng cách tự động bỏ qua video, bài đọc, tự động thảo luận và chấm điểm bài làm.
-
----
-
-## 🚀 Các Tính Năng Chính
-
-1.  **Skip Videos**: Tự động đánh dấu hoàn thành các video bài giảng.
-    -   Nếu video cho phép skip: Tiện ích sẽ kết thúc video ngay lập tức.
-    -   Nếu video bắt buộc xem: Tiện ích sẽ giả lập quá trình xem (start, progress, end) qua API để hoàn thành nhanh chóng.
-2.  **Auto Discussion**: Tự động điền và gửi bài thảo luận (Post/Reply) bằng nội dung chuyên nghiệp có sẵn.
-3.  **Auto Do Assignment**: Tự động điền nội dung cho các bài tập tự luận (Peer-graded Assignment) và nhấn nộp bài.
-4.  **Auto Grade Peer**: Tự động chấm điểm bài làm của học viên khác.
-    -   Cho phép nhập số lượng bài muốn chấm (**Grade count**) để tránh việc chấm quá nhiều bài không cần thiết.
-    -   Tự động chọn thang điểm cao nhất và điền nhận xét tích cực.
-5.  **Locking Browser Bypass (MỚI)**: Vượt qua yêu cầu mở app "Coursera Locking Browser".
-    -   Làm bài Assignment trực tiếp ngay trên trình duyệt web thông thường.
-    -   Cho phép thoải mái sử dụng các phím tắt sao chép, dán (`Ctrl+C`, `Ctrl+V`).
+**Coursera Skipper** is a Chrome extension designed to automate your learning process on Coursera. It saves you a significant amount of time by automatically skipping videos, readings, completing discussion prompts, and grading peer assignments.
 
 ---
 
-## 🛠 Hướng Dẫn Cài Đặt
+## 🚀 Key Features
 
-1.  Tải mã nguồn của extension về máy tính của bạn.
-2.  Mở trình duyệt Google Chrome và truy cập địa chỉ: `chrome://extensions/`.
-3.  Bật chế độ **Developer mode** (Chế độ cho nhà phát triển) ở góc trên bên phải.
-4.  Nhấn nút **Load unpacked** (Tải tiện ích đã giải nén) và chọn thư mục chứa mã nguồn này.
-
----
-
-## 📖 Cách Sử Dụng
-
-### 1. Để Skip Video và Bài Đọc
--   Đăng nhập vào Coursera và vào trang chủ của khóa học (trang có danh sách các tuần học).
--   Mở extension và nhấn **Skip videos**.
--   Tiện ích sẽ quét toàn bộ khóa học và tự động hoàn thành các mục video/reading.
-
-### 2. Để Tự Động Thảo Luận (Auto Discussion)
--   Truy cập vào một bài thảo luận cụ thể trên Coursera.
--   Mở extension và nhấn **Auto Discussion**. Tiện ích sẽ tự động điền nội dung và nhấn **Post**.
-
-### 3. Để Tự Động Nộp Bài (Auto Do Assignment) 
--   Truy cập vào trang nộp bài tập (Submit your assignment).
--   Mở extension và nhấn **Auto Do Assignment**. Tiện ích sẽ điền tiêu đề, nội dung mẫu và nhấn nộp bài.
-
-### 4. Để Tự Động Chấm Điểm (Auto Grade Peer)
--   Truy cập vào trang chấm điểm bài làm của học viên khác (Peer Review).
--   Tại ô **Grade count**, nhập số lượng bài bạn cần chấm (ví dụ: 3).
--   Nhấn **Auto Grade Peer**. Tiện ích sẽ tự động chấm đúng số lượng bài bạn đã nhập và dừng lại.
+1. **Skip Videos**: Automatically marks lecture videos as complete.
+   - If skipping is allowed: The extension instantly ends the video.
+   - If viewing is required: The extension simulates the viewing process (start, progress, end) via APIs to finish quickly.
+2. **Auto Discussion**: Automatically fills in and submits discussion posts or replies using professional pre-made content.
+3. **Auto Do Assignment**: Automatically populates required content fields for peer-graded assignments and submits them.
+4. **Auto Grade Peer**: Automatically reviews and grades assignments submitted by other students.
+   - Allows setting a target number of reviews (**Grade count**) to prevent unnecessary over-grading.
+   - Automatically selects the highest score rubric options and fills in positive feedback.
+5. **Locking Browser Bypass (NEW)**: Bypasses the requirement to launch the "Coursera Locking Browser" app.
+   - Take assignments directly inside your standard web browser.
+   - Freely use copy and paste shortcuts (`Ctrl+C`, `Ctrl+V`).
 
 ---
 
-## ⚠️ Lưu Ý Quan Trọng
+## 🛠 Installation Guide
 
--   **Rủi ro**: Việc sử dụng công cụ tự động hóa có thể vi phạm điều khoản dịch vụ của Coursera. Hãy cân nhắc trước khi sử dụng.
--   **Token**: Tiện ích sử dụng Cookie `CSRF3-Token` hiện tại của bạn để gửi yêu cầu hợp lệ. Nếu gặp lỗi, hãy thử tải lại trang Coursera.
--   **Dừng lại**: Bạn có thể nhấn nút **Stop** màu đỏ bất cứ lúc nào để dừng quá trình chạy.
-
----
-
-## 💝 Ủng Hộ Tác Giả (Donate)
-
-Nếu bạn thấy công cụ này hữu ích và giúp bạn tiết kiệm được nhiều thời gian học tập, hãy mời tác giả một ly cà phê để có thêm động lực duy trì và cập nhật tính năng mới nhé!
-
-### 🏦 Chuyển khoản ngân hàng
-*   **Ngân hàng:** `Techcombank`
-*   **Số tài khoản:** `8626262686868`
-*   **Chủ tài khoản:** `DO THE HUNG`
-
-### 📸 Quét mã QR (MoMo / Ngân hàng)
-
-<img src="assets/qr-donate.jpg" alt="Mã QR Ủng Hộ" width="250"/>
+1. Download the extension source code to your computer.
+2. Open Google Chrome and navigate to `chrome://extensions/`.
+3. Enable **Developer mode** using the toggle switch in the top-right corner.
+4. Click **Load unpacked** and select the folder containing the downloaded source code.
 
 ---
 
-## 👨‍💻 Tác giả
--   **DoHung**
--   **SĐT**: 0586255568
+## 📖 How to Use
 
-*Chúc bạn học tập hiệu quả và tiết kiệm thời gian!*
+### 1. Skip Videos and Reading Material
+- Log in to Coursera and go to the course homepage (where the weekly syllabus is displayed).
+- Open the extension popup and click **Skip videos**.
+- The extension will scan the entire course and automatically mark video and reading items as complete.
+
+### 2. Auto Discussion
+- Navigate to a specific discussion prompt on Coursera.
+- Open the extension popup and click **Auto Discussion**. The extension will automatically populate the response and click **Post**.
+
+### 3. Auto Submit Assignments
+- Navigate to the assignment submission page ("Submit your assignment").
+- Open the extension popup and click **Auto Do Assignment**. The extension will fill in the title, default content, and submit the assignment.
+
+### 4. Auto Grade Peers
+- Navigate to the peer review grading page.
+- Enter the desired number of peer submissions to review in the **Grade count** field (e.g., 3).
+- Click **Auto Grade Peer**. The extension will automatically grade the specified number of submissions and stop.
+
+---
+
+## ⚠️ Important Notes
+
+- **Risks**: Using automation tools may violate Coursera's Terms of Service. Please use at your own discretion.
+- **Token**: The extension uses your current `CSRF3-Token` cookie to send valid requests. If you encounter errors, try refreshing the Coursera page.
+- **Stopping Tasks**: You can click the red **Stop** button at any time to cancel ongoing actions.
+
+---
+*Wishing you efficient learning and time savings!*
